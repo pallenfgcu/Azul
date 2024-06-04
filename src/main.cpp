@@ -1,21 +1,13 @@
-#include <SFML/Graphics.hpp>
+// <<add a file header comment block>>
+#include <Azul.h>
 
 int main()
 {
-    auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
-    window.setFramerateLimit(144);
+    // Azul instance variable "azul"
+    //    <<Update to correct exercise>>
+    fgcu::Azul azul{fgcu::Azul::AzulExercise::Default};
 
-    while (window.isOpen())
-    {
-        for (auto event = sf::Event{}; window.pollEvent(event);)
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
+    // <<add exercise code here>>
 
-        window.clear();
-        window.display();
-    }
-}
+    azul.stop(); // have azul stop here to keep the window open
+} // end main
